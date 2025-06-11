@@ -75,4 +75,35 @@
 * Week 5 null-aggregate
 
 学习内容：
+
+1.Boolean中null表示unknown，在查询结果中false和unknown不出现
+
+2.在PG中实践聚集函数（max、min、avg、count、sum）
+
+3.练习group by和having，验证分组和条件筛选逻辑
+
+4.嵌套子查询中，用 IN/NOT IN 和 >some/>all 编写查询，比较了 =some 与 in 的等价性，还尝试标量子查询和 EXISTS 优化复杂查询
+
 收获：
+
+1.用WITH子句定义临时关系可以简化多表查询
+
+2.涉及到聚集函数有很多invalid的warning，可从底层逻辑理解为什么invalid，查询时需注意语法
+
+* Week 6 change
+
+学习内容：
+
+1.SQL的增、删、改操作，理解DELETE、INSERT 和 UPDATE 的语法及应用场景，区分DELETE（删除数据）和 DROP（删除表）的差异。
+
+2.使用UPDATE结合CASE语句，根据条件批量更新salary字段
+
+3.使用ALTER TABLE为表添加description列并设置默认值null
+
+收获：
+
+1.可用COPY命令从csv文件批量导入数据，显著提升效率
+
+2.掌握PG中的增删改操作
+
+3.自行探索RANK函数，编写查询对课程学分credit进行排名
