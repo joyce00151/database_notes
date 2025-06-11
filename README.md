@@ -107,3 +107,12 @@
 2.掌握PG中的增删改操作
 
 3.自行探索RANK函数，编写查询对课程学分credit进行排名
+
+* Week 7 join
+
+学习内容：
+
+1.理解NATURAL JOIN 的自动匹配机制和 JOIN USING/ON 的灵活性，INNER JOIN 与 OUTER JOIN 的区别
+
+
+收获：
