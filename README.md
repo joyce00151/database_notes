@@ -112,7 +112,35 @@
 
 学习内容：
 
-1.理解NATURAL JOIN 的自动匹配机制和 JOIN USING/ON 的灵活性，INNER JOIN 与 OUTER JOIN 的区别
+1.理解NATURAL JOIN 的自动匹配机制和 JOIN USING/ON 的灵活性，INNER JOIN 与 OUTER JOIN 的区别。可以通过集合A和集合B交、并的关系理解join。
 
+2.可创建索引优化查询速度
 
 收获：
+
+1.在PG中用join on连接instructor和department表，解决重复属性问题，并用left outer join保留未匹配数据。
+
+2.创建视图faculty，通过CREATE VIEW简化查询，验证视图的虚拟表特性。
+
+* week8-advanced
+进入高级数据库的学习，包括高级数据类型和授权机制。
+
+学习内容：
+
+1.日期/时间类型
+
+2.interval的用法
+
+3.与AI讨论serial类型在自增主键中的应用，可以优化表设计
+
+4.用GRANT语句为用户分配查询权限，用CREATE ROLE创建角色。
+
+收获：
+1.在PG中实践 EXTRACT(field FROM timestamp) 提取日期字段，并用 :: 进行类型转换，如 to_date('2025-05-11', 'YYYY-MM-DD')，解决了格式转换问题
+
+2.针对精度问题，用numeric类型替代float，在小数点精度敏感的问题（如金融数据场景）比较重要。
+
+3.to_char() 格式化日期输出，编写复杂查询结合 interval 统计时间跨度
+
+
+
