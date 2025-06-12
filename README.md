@@ -182,61 +182,52 @@ with psycopg.connect(conn_str) as conn:
 # week9-advanced
 
 ## 学习内容：
-
-1.函数、过程和触发器的应用，FUNCTION 返回结果与 PROCEDURE 执行操作的区别
-
-2.与AI讨论SQL注入攻击
+- 1.定义函数（function）：返回结果
+- 2.定义过程（procedure）：执行操作
+- 3.触发器（trigger）：自动执行
+- 4.使用Python（psycopg2）访问数据库
+- 5.SQL注入攻击
 
 ## 收获：
-
-1.在PG中创建了 FUNCTION 计算课程平均学分
-
-2.定义TRIGGER，自动记录 instructor 表薪资更新日志，验证触发器的自动化执行效果
-
-3.用 Python 的 psycopg2 连接 PostgreSQL，编写脚本批量插入数据
+- 1.在PG中创建了 FUNCTION 计算课程平均学分
+- 2.定义TRIGGER，自动记录 instructor 表薪资更新日志，验证触发器的自动化执行效果
+- 3.用 Python 的 psycopg2 连接 PostgreSQL，编写脚本批量插入数据
 
 # Week10-design
 
 ## 学习内容：
-
-1.实体集（如 instructor、student）与联系集（如 advisor）的定义，以及属性类型（简单/复合、单值/多值、派生）
-
-2.One-to-Many 和 Many-to-Many 映射的区别，箭头表示法
+- 1.E-R模型：实体-联系模式，将现实世界需求映射到概念模式
+- 2.实体集和联系集
+- 3.属性：简单vs复合、单值vs多值、派生属性
+- 4.映射：One-to-One、One-to-Many、Many-to-Many、Many-to-One
+- 5.使用draw.io绘制E-R图；实体集的主码、弱实体集
+- 6.去除冗余属性、E-R图转化为关系模式、模式的合并
 
 ## 收获：
-
-1.使用 draw.io 绘制 university 数据库的 E-R 图，并与datagrip中的E-R图进行比对
-
-2.如何将E-R图转化为关系模式。去除冗余属性并合并模式
+- 1.使用 draw.io 绘制 university 数据库的 E-R 图，并与datagrip中的E-R图进行比对
+- 2.知道不同映射的区别，以及如何用箭头表示
+- 3.如何将E-R图转化为关系模式。去除冗余属性并合并模式
 
 # week 11-norm
 
 ## 学习内容：
-
-1.1NF、3NF 和 BCNF 的定义及无损分解的重要性
-
-2.函数依赖（如 ID→name）和闭包推导（如 A→B，B→C 推 A→C）
+- 1.1NF、3NF 和 BCNF 的定义及无损分解的重要性
+- 2.函数依赖（如 ID→name）和闭包推导（如 A→B，B→C 推 A→C）
 
 ## 收获：
-
-1.学会验证是否满足BCNF
-
-2.理解BCNF和3NF之间需要权衡
+- 1.学会验证是否满足BCNF
+- 2.理解BCNF和3NF之间需要权衡，3NF更常用于保持依赖的场景
 
 # week 12-theory
-
 理论学习，数据库如何存储以及索引机制
 
 ## 学习内容：
-
-1.磁盘存储模型，以及堆文件、树文件、顺序文件和哈希文件的组织方式
-
-2.B+树索引，提升数据检索效率
-
-3.稠密索引vs稀疏索引，聚集索引vs非聚集索引，不同的使用场景
+- 1.主流数据库存储基于磁盘，计算时从磁盘读取数据到内存
+- 2.文件存储：DBMS将文件组织成pages，内容包括header和data
+- 3.组织方式：堆文件、树文件、顺序文件、哈希文件
+- 4.存储模型：行存储（row storage）、列存储（column storage）
+- 5.索引：有序索引、聚集索引、非聚集索引、稠密索引、稀疏索引、B+树索引
 
 ## 收获：
-
-1.理解DBMS 如何将数据组织为 pages
-
-2.行存储和列存储在不同查询场景下的效率差异
+- 1.理解DBMS 如何将数据组织为 pages
+- 2.行存储和列存储在不同查询场景下的效率差异
