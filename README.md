@@ -19,11 +19,14 @@
 ## 收获：
 
 1.阅读《Database System Concepts》部分内容，了解文件处理系统的缺点
-（数据冗余与不一致、数据隔离和并发访问异常等），认识这些问题如何推动数据库系统的发展
+（数据冗余与不一致、数据隔离和并发访问异常和原子性问题），认识这些局限如何推动DBMS的发展，特别是在管理管理高价值、大规模、多用户访问数据时的必要性。
 
-2.下载PG和Datagrip，编写简单的CREATE TABLE语句
+2.下载PostgreSQL和Datagrip，编写简单的CREATE TABLE语句，例如定义简单的university schema，调试过程中解决字段类型定义的错误。
 
-3.了解原子性概念：原子的特性是不可再分，原子性保障了数据的一致性。
+3.了解原子性概念：原子的特性是不可再分，保障了数据的一致性。
+
+## 拓展
+阅读CSDN博客[数据库与文件系统](https://blog.csdn.net/hiddpy/article/details/80817184)
 
 # Week2 relational model
 
@@ -31,11 +34,13 @@
 
 1.理解关系数据库的结构，tuple，attribute和relation的对应关系（与table中row和column的概念作类比）
 
-2.候选码和超码的区别，最小超码的唯一性确保数据可区分
+2.schema,例如instructor(ID, name, dept_name, salary)
 
-3.理解关系代数中的select，project和join等操作，笔记见[relational model](relational-models-notes.pdf)
+2.key(超码、候选码、主码、外码），尤其是候选码和超码的区别，最小超码的唯一性确保数据可区分
 
-##收获：
+3.理解关系代数中的select、project、笛卡尔积、join、natural join、union、intersect、difference等操作，笔记见[relational model](relational-models-notes.pdf)
+
+## 收获：
 
 1.连接到PostgreSQL数据库，创建university schema中的instructor和department等关系
 
@@ -43,21 +48,24 @@
 
 3.用SQL实现笛卡尔积和natural join，验证了union和difference的相容性要求
 
+## 拓展
+阅读GeeksforGeeks上的关系代数文章[Introduction of Relational Algebra in DBMS](https://www.geeksforgeeks.org/introduction-of-relational-algebra-in-dbms/)，结合示例加深了对操作的理解
+
 # Week3 SQL
 
 ## 学习内容：
 
-1.常见的数据库定义和操作语句，如DDL的基本数据类型和模式定义
+1.SQL DDL：基本数据类型（数值、字符串、null），模式定义（CREATE TABLE），删除（DROP TABLE、DELETE FROM）
 
-2.null的意义：未知或不存在
-
-3.drop table 和 delete from 的区别
+2.SQL DML：SELECT、FROM、WHERE子句，过滤（between、!=、<>、LIKE），排序（ORDER BY），更名（AS）
 
 ## 收获：
 
-1.实践学习到的语句，练习DML中的select，from，where查询逻辑，尝试between，！=和order by等操作
+1.理解了DDL的基本数据类型（如数值、字符串、null）和模式定义
 
-2.使用as更名优化输出
+2.在DML部分，重点练习select、from、where的查询逻辑，尝试了between、!=和order by等操作，验证查询结果的正确性
+
+3.理解null的意义：未知或不存在，如何影响查询
 
 # Week4 lab
 
