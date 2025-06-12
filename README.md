@@ -83,6 +83,7 @@ HAVING…
 - 3.涉及到聚集函数有很多invalid的warning，可从底层逻辑理解为什么invalid，查询时需注意语法
 
 ## 拓展
+学习order by random()：notes[order by random() notes](order by random().pdf)
 group by和having讲解：[SQL Course for Beginners](https://www.youtube.com/watch?v=7S_tz1z_5bA&t=62s)
 
 # Week 6 change
@@ -179,6 +180,10 @@ with psycopg.connect(conn_str) as conn:
 - 2.针对精度问题，用numeric类型替代float，在小数点精度敏感的问题（如金融数据场景）比较重要。
 - 3.to_char() 格式化日期输出，编写复杂查询结合 interval 统计时间跨度
 
+## 拓展
+- 探究数据库的备份 [数据库的备份](数据库的备份.pdf)
+
+
 # week9-advanced
 
 ## 学习内容：
@@ -218,6 +223,8 @@ with psycopg.connect(conn_str) as conn:
 - 1.学会验证是否满足BCNF
 - 2.理解BCNF和3NF之间需要权衡，3NF更常用于保持依赖的场景
 
+## 拓展：
+
 # week 12-theory
 理论学习，数据库如何存储以及索引机制
 
@@ -231,3 +238,9 @@ with psycopg.connect(conn_str) as conn:
 ## 收获：
 - 1.理解DBMS 如何将数据组织为 pages
 - 2.行存储和列存储在不同查询场景下的效率差异
+
+## 拓展：
+- Slidev
+- DuckDB
+- [vector databases](https://www.dailydoseofds.com/a-beginner-friendly-and-comprehensive-deep-dive-on-vector-databases/#approximate-nearest-neighbors-ann)
+- 也可查看此网站其它data science相关文章
