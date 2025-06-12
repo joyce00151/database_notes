@@ -67,6 +67,11 @@
 
 3.理解null的意义：未知或不存在，如何影响查询
 
+## 拓展
+[聊聊SQL语句中 DDL 、DML 、DQL 、DCL 分别是什么](https://blog.csdn.net/qq_45069279/article/details/115270096)
+
+除了课上讲过的DDL和DML以外，还有DQL和DCL，分别代表Query和Control，DQL专注于数据查询；DCL则用于设置和撤销用户权限。
+
 # Week4 lab
 
 ## 实践：PostgreSQL 环境搭建与数据操作实验
