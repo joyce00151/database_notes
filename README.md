@@ -102,6 +102,56 @@ group by和having讲解：[SQL Course for Beginners](https://www.youtube.com/wat
 - 3.自行探索RANK函数，编写查询对课程学分credit进行排名
 - 4.尝试UPDATE结合CASE语句，根据条件批量更新salary字段
 
+## 拓展
+- 5月8日lab 使用python访问数据库，实现增、删、改操作。代码如下：
+```python
+import psycopg
+#Update theconnasyouneed
+with psycopg.connect("dbname=mydb user=postgres port=5432 password=Joyce.2911") as conn:
+    with conn.cursor() as cur:
+        cur.execute("SELECT * FROM department")
+        records = cur.fetchall()
+        print(records)
+
+# 数据库的增删改操作
+
+# 连接字符串，替换为你自己的参数
+conn_str = "dbname=mydb user=postgres port=5432 password=Joyce.2911 host=localhost"
+
+with psycopg.connect(conn_str) as conn:
+    with conn.cursor() as cur:
+        
+        # 创建 department_new 表（如果不存在）
+        cur.execute("""
+            CREATE TABLE IF NOT EXISTS department_new (
+                id   INT PRIMARY KEY,
+                name TEXT NOT NULL
+            )
+        """)
+
+        # 插入新数据（INSERT）
+        cur.execute(
+            "INSERT INTO department_new (id, name) VALUES (%s, %s)",
+            (4, 'HR')
+        )
+
+        # 更新数据（UPDATE）
+        cur.execute(
+            "UPDATE department_new SET name = %s WHERE id = %s",
+            ('Human Resources', 4)
+        )
+
+        # 删除数据（DELETE）
+        cur.execute(
+            "DELETE FROM department_new WHERE id = %s",
+            (4,)
+        )
+
+        # 提交事务
+        conn.commit()
+
+```
+
 # Week 7 join
 
 ## 学习内容：
