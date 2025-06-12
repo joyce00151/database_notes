@@ -123,6 +123,7 @@
 2.创建视图faculty，通过CREATE VIEW简化查询，验证视图的虚拟表特性。
 
 * week8-advanced
+  
 进入高级数据库的学习，包括高级数据类型和授权机制。
 
 学习内容：
@@ -142,5 +143,32 @@
 
 3.to_char() 格式化日期输出，编写复杂查询结合 interval 统计时间跨度
 
+* week9-advanced
 
+学习内容：
 
+1.函数、过程和触发器的应用，FUNCTION 返回结果与 PROCEDURE 执行操作的区别
+
+2.与AI讨论SQL注入攻击
+
+收获：
+
+1.在PG中创建了 FUNCTION 计算课程平均学分
+
+2.定义TRIGGER，自动记录 instructor 表薪资更新日志，验证触发器的自动化执行效果
+
+3.用 Python 的 psycopg2 连接 PostgreSQL，编写脚本批量插入数据
+
+* week10-design
+
+学习内容：
+
+1.实体集（如 instructor、student）与联系集（如 advisor）的定义，以及属性类型（简单/复合、单值/多值、派生）
+
+2.One-to-Many 和 Many-to-Many 映射的区别，箭头表示法
+
+收获：
+
+1.使用 draw.io 绘制 university 数据库的 E-R 图，并与datagrip中的E-R图进行比对
+
+2.如何将E-R图转化为关系模式。去除冗余属性并合并模式
