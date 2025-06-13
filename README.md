@@ -56,7 +56,7 @@ CMU 15-445/645 — Spring 2025](https://15445.courses.cs.cmu.edu/spring2025/)
 - [聊聊SQL语句中 DDL 、DML 、DQL 、DCL 分别是什么](https://blog.csdn.net/qq_45069279/article/details/115270096)
 除了课上讲过的DDL和DML以外，还有DQL和DCL，分别代表Query和Control，DQL专注于数据查询；DCL则用于设置和撤销用户权限。
 
-- 除了课上讲授的LIKE以外，了解PG中的字符串匹配[Pattern Matching Notes](Pattern Matching.md)
+- 除了课上讲授的LIKE以外，了解PG中的字符串匹配[Pattern Matching Notes](PatternMatching.md)
 
 # Week4 lab
 
@@ -90,7 +90,7 @@ HAVING…
 - 3.涉及到聚集函数有很多invalid的warning，可从底层逻辑理解为什么invalid，查询时需注意语法
 
 ## 拓展
-学习order by random()：notes[order by random() notes](order by random().pdf)
+学习order by random()：notes[order by random() notes](order-by-random().pdf)
 group by和having讲解：[SQL Course for Beginners](https://www.youtube.com/watch?v=7S_tz1z_5bA&t=62s)
 
 # Week 6 change
@@ -188,7 +188,7 @@ with psycopg.connect(conn_str) as conn:
 - 3.to_char() 格式化日期输出，编写复杂查询结合 interval 统计时间跨度
 
 ## 拓展
-- 探究数据库的备份 [数据库的备份](数据库的备份.pdf)
+- 与AI交流，探究数据库的备份 [数据库的备份](数据库的备份.pdf)
 
 
 # week9-advanced
@@ -236,6 +236,8 @@ with psycopg.connect(conn_str) as conn:
 - 1.学会验证是否满足BCNF
 - 2.理解BCNF和3NF之间需要权衡，3NF更常用于保持依赖的场景
 
+对于BCNF和3NF的概念还不是特别清晰，需要借助具体例子加深理解
+
 ## 拓展：
 - 进一步结合示例了解范式 [A Comprehensive Guide to Database Normalization with Examples](https://guides.visual-paradigm.com/a-comprehensive-guide-to-database-normalization-with-examples/)
 
@@ -248,6 +250,7 @@ with psycopg.connect(conn_str) as conn:
 - 3.组织方式：堆文件、树文件、顺序文件、哈希文件
 - 4.存储模型：行存储（row storage）、列存储（column storage）
 - 5.索引：有序索引、聚集索引、非聚集索引、稠密索引、稀疏索引、B+树索引
+- 6.事物的ACID特性，尤其是对一致性consistency的理解；了解幻读、不可重复读
 
 ## 收获：
 - 1.理解DBMS 如何将数据组织为 pages
