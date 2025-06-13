@@ -1,6 +1,12 @@
 # 《数据库原理与应用》课程学习记录
 - 记录每周学习内容和收获
 - 课件notes见[database notes](notes.pdf)
+- 作业见[DB homework](https://github.com/joyce00151/database_homework))
+
+# 参考材料
+- [Database-System-Concepts-7th-Edition](Database-System-Concepts-7th-Edition.pdf)
+- [Database Systems
+CMU 15-445/645 — Spring 2025](https://15445.courses.cs.cmu.edu/spring2025/)
 
 # Week1 intro
 
@@ -47,9 +53,10 @@
 - 3.理解null的意义：未知或不存在，如何影响查询
 
 ## 拓展
-[聊聊SQL语句中 DDL 、DML 、DQL 、DCL 分别是什么](https://blog.csdn.net/qq_45069279/article/details/115270096)
-
+- [聊聊SQL语句中 DDL 、DML 、DQL 、DCL 分别是什么](https://blog.csdn.net/qq_45069279/article/details/115270096)
 除了课上讲过的DDL和DML以外，还有DQL和DCL，分别代表Query和Control，DQL专注于数据查询；DCL则用于设置和撤销用户权限。
+
+- 除了课上讲授的LIKE以外，了解PG中的字符串匹配[Pattern Matching Notes](Pattern Matching.md)
 
 # Week4 lab
 
@@ -198,6 +205,9 @@ with psycopg.connect(conn_str) as conn:
 - 2.定义TRIGGER，自动记录 instructor 表薪资更新日志，验证触发器的自动化执行效果
 - 3.用 Python 的 psycopg2 连接 PostgreSQL，编写脚本批量插入数据
 
+## 拓展：
+除了关系型数据库，对常见的非关系型数据库进行了解（文档存储、键值存储和宽列存储等类型），下载文档存储类数据库MongoDB，执行基本的增、删、改、查操作，见[作业7](7.md)
+
 # Week10-design
 
 ## 学习内容：
@@ -209,9 +219,12 @@ with psycopg.connect(conn_str) as conn:
 - 6.去除冗余属性、E-R图转化为关系模式、模式的合并
 
 ## 收获：
-- 1.使用 draw.io 绘制 university 数据库的 E-R 图，并与datagrip中的E-R图进行比对
+- 1.使用 [draw.io](https://app.diagrams.net/) 绘制 university 数据库的 E-R 图，并与datagrip中的E-R图进行比对
 - 2.知道不同映射的区别，以及如何用箭头表示
 - 3.如何将E-R图转化为关系模式。去除冗余属性并合并模式
+
+## 拓展
+完成作业时，发现将一个关系转化为E-R图还是有所困难，参考[A Guide to the Entity Relationship Diagram (ERD)](https://www.databasestar.com/entity-relationship-diagram/)完成了E-R图的绘制[作业8](8_er.md)，有很多不同的notation，尽量和课上讲到的保持一致。
 
 # week 11-norm
 
@@ -224,6 +237,7 @@ with psycopg.connect(conn_str) as conn:
 - 2.理解BCNF和3NF之间需要权衡，3NF更常用于保持依赖的场景
 
 ## 拓展：
+- 进一步结合示例了解范式 [A Comprehensive Guide to Database Normalization with Examples](https://guides.visual-paradigm.com/a-comprehensive-guide-to-database-normalization-with-examples/)
 
 # week 12-theory
 理论学习，数据库如何存储以及索引机制
