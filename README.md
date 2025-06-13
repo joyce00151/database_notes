@@ -23,7 +23,7 @@ CMU 15-445/645 — Spring 2025](https://15445.courses.cs.cmu.edu/spring2025/)
 - 3.了解原子性概念：原子的特性是不可再分，保障了数据的一致性。
 
 ## 拓展
-阅读CSDN博客[数据库与文件系统](https://blog.csdn.net/hiddpy/article/details/80817184)
+- 阅读CSDN博客[数据库与文件系统](https://blog.csdn.net/hiddpy/article/details/80817184)
 
 # Week2 relational model
 
@@ -39,7 +39,7 @@ CMU 15-445/645 — Spring 2025](https://15445.courses.cs.cmu.edu/spring2025/)
 - 3.用SQL实现笛卡尔积和natural join，验证了union和difference的相容性要求
 
 ## 拓展
-阅读GeeksforGeeks上的关系代数文章[Introduction of Relational Algebra in DBMS](https://www.geeksforgeeks.org/introduction-of-relational-algebra-in-dbms/)，结合示例加深了对操作的理解
+- 阅读GeeksforGeeks上的关系代数文章[Introduction of Relational Algebra in DBMS](https://www.geeksforgeeks.org/introduction-of-relational-algebra-in-dbms/)，结合示例加深了对操作的理解
 
 # Week3 SQL
 
@@ -90,8 +90,8 @@ HAVING…
 - 3.涉及到聚集函数有很多invalid的warning，可从底层逻辑理解为什么invalid，查询时需注意语法
 
 ## 拓展
-学习order by random()：notes[order by random() notes](order-by-random().pdf)
-group by和having讲解：[SQL Course for Beginners](https://www.youtube.com/watch?v=7S_tz1z_5bA&t=62s)
+- 学习order by random()：notes[order by random() notes](order-by-random().pdf)
+- group by和having讲解：[SQL Course for Beginners](https://www.youtube.com/watch?v=7S_tz1z_5bA&t=62s)
 
 # Week 6 change
 
@@ -206,7 +206,7 @@ with psycopg.connect(conn_str) as conn:
 - 3.用 Python 的 psycopg2 连接 PostgreSQL，编写脚本批量插入数据
 
 ## 拓展：
-除了关系型数据库，对常见的非关系型数据库进行了解（文档存储、键值存储和宽列存储等类型），下载文档存储类数据库MongoDB，执行基本的增、删、改、查操作，见[作业7](7.md)
+- 除了关系型数据库，对常见的非关系型数据库进行了解（文档存储、键值存储和宽列存储等类型），下载文档存储类数据库MongoDB，执行基本的增、删、改、查操作，见[作业7](7.md)
 
 # Week10-design
 
@@ -224,7 +224,7 @@ with psycopg.connect(conn_str) as conn:
 - 3.如何将E-R图转化为关系模式。去除冗余属性并合并模式
 
 ## 拓展
-完成作业时，发现将一个关系转化为E-R图还是有所困难，参考[A Guide to the Entity Relationship Diagram (ERD)](https://www.databasestar.com/entity-relationship-diagram/)完成了E-R图的绘制[作业8](8_er.md)，有很多不同的notation，尽量和课上讲到的保持一致。
+- 完成作业时，发现将一个关系转化为E-R图还是有所困难，参考[A Guide to the Entity Relationship Diagram (ERD)](https://www.databasestar.com/entity-relationship-diagram/)完成了E-R图的绘制[作业8](8_er.md)，有很多不同的notation，尽量和课上讲到的保持一致。
 
 # week 11-norm
 
